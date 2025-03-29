@@ -1,0 +1,39 @@
+# 로그 파일
+*.log
+
+# 의존성 디렉토리
+node_modules/
+vendor/
+
+# 빌드 출력
+dist/
+build/
+*.out
+
+# 환경 변수 파일
+.env
+.env.local
+.env.*.local
+
+# IDE 및 편집기 설정
+.idea/
+.vscode/
+*.sublime-workspace
+
+# 운영 체제에서 생성된 파일
+.DS_Store
+Thumbs.db
+
+# 캐시 파일
+*.cache
+*.bak
+*.swp
+
+# 압축 파일
+*.zip
+*.tar.gz
+*.rar
+
+# 데이터베이스 파일
+*.db
+*.sqlite
