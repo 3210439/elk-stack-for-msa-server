@@ -6,7 +6,7 @@ services:
     container_name: elasticsearch
     environment:
       - discovery.type=single-node
-      - xpack.security.enabled=false  # 보안 비활성화 (테스트용)
+      - xpack.security.enabled=false
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ports:
       - "9200:9200"
@@ -43,7 +43,9 @@ services:
 
 networks:
   elk-network:
-    driver: bridge
+    external:
+      name: msa-order-api_order-network  # order-api와 동일 네트워크로 변경
+    # driver: bridge 제거
 
 volumes:
   esdata:
